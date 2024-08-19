@@ -88,7 +88,7 @@ const Navbar = () => {
             <a href="#">Contact Us</a>
           </li>
         </ul>
-        <div className="login-signup-btn">Log In/Sign Up</div>{" "}
+        <div className="login-signup-btn">Log In/Sign Up</div>
         {/* Log In/Sign Up Button */}
       </div>
       <div className="under-text-container">

@@ -6,8 +6,9 @@ const Booking = () => {
       <div className="location-select">
         <span className="pickup-option">Same as Pick-Up</span>
         <span className="dropoff-option">Different Drop-Off</span>
+        <div className="vehicle-select">
           <select id="vehicle-type" className="dropdown-select">
-            <option value="" disabled selected>
+            <option disabled selected>
               Select vehicle type
             </option>
             <option value="sedan">Sedan</option>

@@ -1090,6 +1090,8 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+
+
 }
 
 .popular-cars-section h2 {
@@ -1106,6 +1108,8 @@ body {
   overflow-x: auto;
   scrollbar-width: none;
   padding-bottom: 15px;
+
+
 }
 
 .car-cards-container::-webkit-scrollbar {

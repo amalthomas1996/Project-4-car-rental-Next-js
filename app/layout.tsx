@@ -6,7 +6,8 @@ import Booking from "./components/Booking";
 import SideButton from "./components/SideButton";
 import Banner from "./components/Banner";
 import PopularCar from "./PopularCar";
-import Subscribe from "./components/subscribe";
+import Subscribe from "./components/Subscribe";
+import Steps from "./components/Steps";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,6 +66,7 @@ export default function RootLayout({
           </div>
         </div>
         <Subscribe />
+        <Steps />
         <main>{children}</main>
       </body>
     </html>

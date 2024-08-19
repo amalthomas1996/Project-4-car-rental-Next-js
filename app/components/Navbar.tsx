@@ -1,58 +1,111 @@
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleHamburgerClick = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <div>
       {/* Nav Bar */}
       <nav className="navbar">
         <div className="logo">
           <a href="#">
-            <img src="/main-logo.svg" alt="Car Rental Logo" />
+            <Image
+              src="/main-logo.svg"
+              alt="Car Rental Logo"
+              width={150}
+              height={50}
+            />
           </a>
         </div>
-        <div className="hamburger" id="hamburger">
+        <div
+          className={`hamburger ${menuOpen ? "menu-open" : ""}`}
+          onClick={handleHamburgerClick}
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <ul className="nav-links">
+        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li>
-            <a href="#">About</a>
+            <a href="#" onClick={handleLinkClick}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#">Offers</a>
+            <a href="#" onClick={handleLinkClick}>
+              Offers
+            </a>
           </li>
           <li>
-            <a href="#">Corporate</a>
+            <a href="#" onClick={handleLinkClick}>
+              Corporate
+            </a>
           </li>
           <li>
-            <a href="#">Personal</a>
+            <a href="#" onClick={handleLinkClick}>
+              Personal
+            </a>
           </li>
           <li>
-            <a href="#">Locations</a>
+            <a href="#" onClick={handleLinkClick}>
+              Locations
+            </a>
           </li>
           <li>
-            <a href="#">Contact Us</a>
+            <a href="#" onClick={handleLinkClick}>
+              Contact Us
+            </a>
           </li>
         </ul>
         <div className="right-icons">
           <div className="social-icons">
             <a href="#">
-              <img src="/facebook-logo.svg" alt="Facebook" />
+              <Image
+                src="/facebook-logo.svg"
+                alt="Facebook"
+                width={24}
+                height={24}
+              />
             </a>
             <a href="#">
-              <img src="/insta-logo.svg" alt="Instagram" />
+              <Image
+                src="/insta-logo.svg"
+                alt="Instagram"
+                width={24}
+                height={24}
+              />
             </a>
             <a href="#">
-              <img src="/x-logo.svg" alt="X" />
+              <Image src="/x-logo.svg" alt="X" width={24} height={24} />
             </a>
             <a href="#">
-              <img src="/linkedin-logo.svg" alt="LinkedIn" />
+              <Image
+                src="/linkedin-logo.svg"
+                alt="LinkedIn"
+                width={24}
+                height={24}
+              />
             </a>
           </div>
           <div className="profile">
             <div className="notification">
-              <img src="/notification-icon.svg" alt="Notification" />
-              {/* for dynamic notification count */}
+              <Image
+                src="/notification-icon.svg"
+                alt="Notification"
+                width={24}
+                height={24}
+              />
+              {/* Uncomment the next line for dynamic notification count */}
               {/* <span className="notification-count">1</span> */}
             </div>
             <a href="#" className="profile-link">
@@ -62,34 +115,45 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div className="mobile-menu" id="mobile-menu">
+      <div
+        className={`mobile-menu ${menuOpen ? "active" : ""}`}
+        id="mobile-menu"
+      >
         <ul className="mobile-nav-links">
           <li>
-            <a href="#">About Us</a>
+            <a href="#" onClick={handleLinkClick}>
+              About Us
+            </a>
           </li>
-          <div className="mobile"></div>
           <li>
-            <a href="#">Offers</a>
+            <a href="#" onClick={handleLinkClick}>
+              Offers
+            </a>
           </li>
-          <div className="mobile"></div>
           <li>
-            <a href="#">Corporate</a>
+            <a href="#" onClick={handleLinkClick}>
+              Corporate
+            </a>
           </li>
-          <div className="mobile"></div>
           <li>
-            <a href="#">Personal</a>
+            <a href="#" onClick={handleLinkClick}>
+              Personal
+            </a>
           </li>
-          <div className="mobile"></div>
           <li>
-            <a href="#">Locations</a>
+            <a href="#" onClick={handleLinkClick}>
+              Locations
+            </a>
           </li>
-          <div className="mobile"></div>
           <li>
-            <a href="#">Contact Us</a>
+            <a href="#" onClick={handleLinkClick}>
+              Contact Us
+            </a>
           </li>
         </ul>
-        <div className="login-signup-btn">Log In/Sign Up</div>
-        {/* Log In/Sign Up Button */}
+        <div className="login-signup-btn" onClick={handleLinkClick}>
+          Log In/Sign Up
+        </div>
       </div>
       <div className="under-text-container">
         <span className="under-text">

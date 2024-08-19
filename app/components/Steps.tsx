@@ -37,11 +37,11 @@ const Steps = () => {
 
         <div className="step-wrapper">
           <div className="step-number">
-            <img src="./Assets/step-3.svg" alt="step-3" />
+            <img src="/step-3.svg" alt="step-3" />
           </div>
           <div className="step">
             <div className="step-icon">
-              <img src="./Assets/car-red-icon.svg" alt="Car Icon" />
+              <img src="/car-red-icon.svg" alt="Car Icon" />
             </div>
             <div className="step-description">
               Make payment and book the car. Select an option to either have the

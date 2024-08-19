@@ -5,9 +5,12 @@ import Navbar from "./components/Navbar";
 import Booking from "./components/Booking";
 import SideButton from "./components/SideButton";
 import Banner from "./components/Banner";
-import PopularCar from "./PopularCar";
+import PopularCar from "./components/PopularCars";
 import Subscribe from "./components/Subscribe";
 import Steps from "./components/Steps";
+import Location from "./components/Location";
+import Faq from "./components/Faq";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -67,7 +70,10 @@ export default function RootLayout({
         </div>
         <Subscribe />
         <Steps />
+        <Location />
+        <Faq />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

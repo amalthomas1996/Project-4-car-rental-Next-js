@@ -1,6 +1,15 @@
 import React from "react";
-
-const PopularCar = ({
+interface PopularCarProps {
+  carImage: string;
+  carName: string;
+  description: string;
+  people: string;
+  transmission: string;
+  doors: string;
+  ac: string;
+  price: string;
+}
+const PopularCar: React.FC<PopularCarProps> = ({
   carImage,
   carName,
   description,

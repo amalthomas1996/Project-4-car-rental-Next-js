@@ -5,7 +5,7 @@ const Banner = () => {
     <div>
       {/*Banner Section */}
       <div className="banner-section">
-        <img src="/public/banner-1.svg" alt="Banner Image" />
+        <img src="../public/banner-1.svg" alt="Banner Image" />
         <div className="banner-content">
           <h3>
             Recieve guarnteed <button>GIFT VOUCHER</button>

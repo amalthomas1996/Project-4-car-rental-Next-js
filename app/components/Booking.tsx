@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Booking = () => {
@@ -24,7 +25,12 @@ const Booking = () => {
         <form className="booking-form">
           <div className="form-item">
             <label htmlFor="location" className="icon-location">
-              <img src="/location-icon.svg" alt="location-icon" />
+              <Image
+                src="/location-icon.svg"
+                alt="location-icon"
+                height={26}
+                width={26}
+              />
             </label>
 
             <select
